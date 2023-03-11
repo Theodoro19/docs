@@ -8,7 +8,6 @@ O nome que damos para essas fórmulas é design patterns (Padrões de projeto), 
 
 ## O que é?
 
-***
 Os Padrōes de Projeto são soluções generalistas para problemas recorrentes durante o desenvolvimento de um software. Não se trata de um framework ou um código pronto, mas de uma definição de alto nível de como um problema comum pode ser solucionado.
 
 Os padrões de projeto (design patterns) são como plantas pré-projetadas de uma construção, que você pode alterar para se adequar melhor na resolução de um problema recorrente em seu código. O que diferencia os padrões de projeto das funções e bibliotecas é que você não pode simplesmente copiá-los direto para seu programa, já que eles não são um pedaço de código, mas sim um conceito que serve como uma solução.
@@ -17,7 +16,6 @@ Assim, para se implementar um padrão de projeto você deve seguir o conceito do
 
 ## Origem
 
-***
 Em 1978 os arquitetos Christopher Alexander, Sara Ishikawa e Murray Silverstein escreveram um livro chamado “A Pattern Language: Towns, Buildings, Construction” que foi publicado em português com o nome “Uma Linguagem de Padrões”. Neste livro os autores catalogaram 253 tipos de problemas (ou desafios de projeto) e analisaram o que está por trás de cada situação, descrevendo-as na sua essência e propondo uma solução padrão.
 
 Em 1987 durante a segunda edição da OOPSLA (Object-Oriented Programming, Systems, Languages, and Applications) o engenheiro de software Kent Back, que posteriormente foi um dos criadores das metodologias Extreme Programming e Test Driven Development (TDD), junto com Ward Cunningham apresentaram uma palestra intitulada “Using Pattern Languages for Object-Oriented Programs” (Utilizando a linguagem dos padrões para programação orientada a objetos, em tradução livre). Nesta palestra eles propuseram cinco padrões de projetos no campo da ciência da computação.
@@ -28,7 +26,6 @@ Desde então, Design Patterns tem sido um tema bastante estudado por programador
 
 ## Benefícios
 
-***
 Design patterns são modelos que já foram utilizados e testados anteriormente, portanto podem representar um bom ganho de produtividade para os desenvolvedores.
 
 Seu uso também contribui para a organização e manutenção de projetos, já que esses padrões se baseiam em baixo acoplamento entre as classes e padronização do código.
@@ -41,7 +38,6 @@ Além disso, a utilização deles claramente traz economia de tempo de trabalho,
 
 ## E o SOLID? Onde se encaixa?
 
-***
 Frequentemente as pessoas que iniciam os estudos de design patterns se deparam com esse termo. Mas afinal, do que se trata? Tem realmente a ver com padrões de projeto?
 
 O SOLID é uma sigla em inglês para cinco princípios de projeto que possuem o objetivo de fazer programas mais compreensíveis, flexíveis e sustentáveis.
@@ -68,21 +64,63 @@ Os três principais padrões de projeto definidos pelo livro “Design Patterns:
 
 ## Tipos de padrões
 
-1) Padrões criacionais: estes padrões oferecem diversas alternativas de criação de objetos, o que aumenta a flexibilidade e a reutilização de código. Alguns dos principais padrões desse tipo são:
+1) Padrões Criacionais
 
-Factory Method
-Abstract Factory
-Builder
-2) Padrões estruturais: Nos mostram como montar objetos e classes em estruturas maiores, sem perder a eficiência e flexibilidade. Alguns dos principais padrões desse tipo são:
+    Estes padrões oferecem diversas alternativas de criação de objetos, o que aumenta a flexibilidade e a reutilização de código.
 
-Adapter
-Bridge
-Composite
-3) Padrões comportamentais: Nos ajudam a trabalhar melhor com os algoritmos e com a delegação de responsabilidades entre os objetos. Os padrões que se destacam nesse tipo são:
+    - Factory Method
+    - Abstract Factory
+    - Builder
+    - Prototype
+    - Singleton
 
-Chain of Responsibility
-Command
-Interpreter
+2) Padrões Estruturais
+
+    Nos mostram como montar objetos e classes em estruturas maiores, sem perder a eficiência e flexibilidade.
+
+    - Adapter
+    - Bridge
+    - Composite
+    - Decorator
+    - Facade
+    - Business Delegate
+    - Flyweight
+    - Proxy
+
+3) Padrões comportamentais
+
+    Nos ajudam a trabalhar melhor com os algoritmos e com a delegação de responsabilidades entre os objetos.
+
+    - Chain of Responsibility
+    - Command
+    - Interpreter
+    - Iterator
+    - Mediator
+    - Memento
+    - Observer
+    - State
+    - Strategy
+    - Template Method
+    - Visitor
+
+4) Padrōes Arquiteturais
+
+    - Interceptor
+    - Model View Controller
+    - Model View ViewMode
+    - Model View Presenter
+    - Arquitetura Multicamada (n-tier)
+    - Specification
+    - Publish-Subscribe
+    - Inversion of Control
+    - Dependency Injection
+    - Intercepting Filter
+    - Lazy Loading
+    - Mock Object
+    - Method Chaining
+    - Unit of Work
+    - Delegation
+    - Forwarding
 
 ## Conclusão
 
