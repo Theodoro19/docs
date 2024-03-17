@@ -199,7 +199,7 @@ func (truck Mechanical) NumberOfAxles() int {
 }
 ```
 
-Para finalizar, criaremos a classe main onde iremos ter uma função que cria fábricas de sub família da família Veículo.
+Para finalizar, criaremos a classe abstract_factory onde iremos ter uma função que cria fábricas de sub família da família Veículo.
 O objetivo é dividir a complexidade da criação de famílias de objetos em pequenos blocos para facilitar a leitura e manutenção.
 Basicamente delega criações de objetos de sub família para fábricas de sub família.
 
