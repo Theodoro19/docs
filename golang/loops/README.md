@@ -294,3 +294,235 @@ Resultado:
 4
 5
 ```
+
+### For-Range Loop
+
+Ele é usado para iterar sobre diferentes coleções de estruturas de dados. Como:
+
+- Strings
+- Array
+- Slice
+- Maps
+- Channel
+
+**array/slice**
+
+```go
+for index, value := range array/slice 
+```
+
+Exemplo:
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    letters := []string{"a", "b", "c"}
+
+    fmt.Println("Both Index and Value")
+    for i, letter := range letters {
+        fmt.Printf("Index: %d Value:%s\n", i, letter)
+    }
+
+    fmt.Println("\nOnly value")
+    for _, letter := range letters {
+        fmt.Printf("Value: %s\n", letter)
+    }
+
+    fmt.Println("\nOnly Index")
+    for i := range letters {
+        fmt.Printf("Index: %d\n", i)
+    }
+
+    fmt.Println("\nWithout Index and Value")
+    i := 0
+    for range letters {
+        fmt.Printf("Index: %d Value: %s\n", i, letters[i])
+        i++
+    }
+}
+
+```
+
+Resultado:
+
+```text
+Both Index and Value
+Index: 0 Value:a
+Index: 1 Value:b
+Index: 2 Value:c
+
+Only value
+Value: a
+Value: b
+Value: c
+
+Only Index
+Index: 0
+Index: 1
+Index: 2
+
+Without Index and Value
+Index: 0 Value: a
+Index: 1 Value: b
+Index: 2 Value: c
+
+Program exited.
+```
+
+**string**
+
+Uma string em Go é uma sequência de bites.
+Seu unicode padrão é UTF-8. Em UTF-8, os 128 caracteres ASCII são correspondentes a um bite. Todos os outros são entre um e quatro bites.
+
+```go
+for index, character := range string
+```
+
+Exemplo:
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	sample := "a£c"
+
+	fmt.Printf("Length is %d\n", len(sample))
+
+	for i := 0; i < len(sample); i++ {
+		fmt.Printf("%c\n", sample[i])
+	}
+
+	fmt.Println("\nBoth Index and Value")
+	for i, letter := range sample {
+		fmt.Printf("Start Index: %d Value:%s\n", i, string(letter))
+	}
+
+	fmt.Println("\nOnly value")
+	for _, letter := range sample {
+		fmt.Printf("Value:%s\n", string(letter))
+	}
+
+	fmt.Println("\nOnly Index")
+	for i := range sample {
+		fmt.Printf("Start Index: %d\n", i)
+	}
+}
+```
+
+Resultado:
+
+```text
+Length is 4
+a
+Â
+£
+c
+Both Index and Value
+Start Index: 0 Value:a
+Start Index: 1 Value:£
+Start Index: 3 Value:c
+
+Only value
+Value:a
+Value:£
+Value:c
+
+Only Index
+Start Index: 0
+Start Index: 1
+Start Index: 3
+```
+
+**map**
+
+```go
+for key, value := range map
+```
+
+Exemplo:
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    sample := map[string]string{
+        "a": "x",
+        "b": "y",
+    }
+
+    fmt.Println("Both Key and Value")
+    for k, v := range sample {
+        fmt.Printf("key :%s value: %s\n", k, v)
+    }
+
+    fmt.Println("\nOnly keys")
+    for k := range sample {
+        fmt.Printf("key :%s\n", k)
+    }
+
+    fmt.Println("\nOnly values")
+    for _, v := range sample {
+        fmt.Printf("value :%s\n", v)
+    }
+}
+```
+
+Resultado:
+
+```text
+Both Key and Value
+key :a value: x
+key :b value: y
+
+Only keys
+key :a
+key :b
+
+Only values
+value :x
+value :y
+```
+
+**channel**
+
+```go
+for value := range channel
+```
+
+Exemplo:
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    ch := make(chan string)
+    go pushToChannel(ch)
+    for val := range ch {
+        fmt.Println(val)
+    }
+}
+func pushToChannel(ch chan<- string) {
+    ch <- "a"
+    ch <- "b"
+    ch <- "c"
+    close(ch)
+}
+```
+
+Resultado:
+
+```text
+a
+b
+c
+```
+s
