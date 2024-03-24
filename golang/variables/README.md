@@ -1,5 +1,7 @@
 # GO Variables
 
+### Introdução
+
 Em GO, os nomes das variáveis só podem começar com uma letra ou underline e ele é **Case Sensitive** então letras maiúsculas e minúsculas são tratadas de formas diferentes.
 
 ### Como declarar uma variável
