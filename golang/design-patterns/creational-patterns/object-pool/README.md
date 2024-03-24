@@ -1,7 +1,5 @@
 # Object Pool
 
-### Introdução
-
 O `Object Pool` é um padrão de projeto no qual um pool de objetos são inicializados e criados antecipadamente e mantidos em um pool.
 Conforme, e quando necessário, um cliente pode solicitar um objeto do pool, usá-lo e devolvê-lo ao pool.
 O objeto pool nunca é destruído.
