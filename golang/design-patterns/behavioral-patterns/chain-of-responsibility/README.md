@@ -7,12 +7,22 @@ Para cada solicitação recebida, ela é passada pela cadeia e por cada manipula
 1. Processa a solicitação ou ignora o processamento.
 2. Decide se deve passar a solicitação para o próximo manipulador na cadeia, ou não.
 
-### Quando usar
+## Quando usar
 
 O padrão é aplicável quando há vários candidatos para processar a mesma solicitação.
 Quando não desejamos que o cliente escolha o receptor, pois vários objetos podem lidar com a solicitação.
 
 Além disso, desejamos dissociar o cliente dos receptores. O cliente só precisa conhecer o primeiro elemento da cadeia.
+
+## Estrutura de Código
+
+[department.go](main/department.go) - Manipulador
+[doctor.go](main/doctor.go) - Manipulador Concreto
+[medical.go](main/medical.go) - Manipulador Concreto
+[patient.go](main/patient.go) - Manipulador Concreto
+[reception.go](main/reception.go) - Manipulador Concreto
+[cashier.go](main/cashier.go) - Manipulador Concreto
+[main.go](main/main.go) - Cliente
 
 ## Exemplo
 
