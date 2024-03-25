@@ -14,16 +14,6 @@ Quando não desejamos que o cliente escolha o receptor, pois vários objetos pod
 
 Além disso, desejamos dissociar o cliente dos receptores. O cliente só precisa conhecer o primeiro elemento da cadeia.
 
-## Estrutura de Código
-
-[department.go](main/department.go) - Manipulador
-[doctor.go](main/doctor.go) - Manipulador Concreto
-[medical.go](main/medical.go) - Manipulador Concreto
-[patient.go](main/patient.go) - Manipulador Concreto
-[reception.go](main/reception.go) - Manipulador Concreto
-[cashier.go](main/cashier.go) - Manipulador Concreto
-[main.go](main/main.go) - Cliente
-
 ## Exemplo
 
 Suponhamos que somos diretores de um hospital e precisamos controlar todos os seus departamentos, como:
@@ -36,6 +26,16 @@ Suponhamos que somos diretores de um hospital e precisamos controlar todos os se
 Sempre que chega um novo paciente, primeiramente ele vai para a recepção se cadastrar.
 Depois é encaminhado para um médico para fazer a triagem e em seguida, é encaminhado para uma sala de atendimento.
 Para finalizar o atendimento, ele precisa passar no caixa para pagar o valor de sua consulta.
+
+## Estrutura de Código
+
+[department.go](main/department.go) - Manipulador
+[doctor.go](main/doctor.go) - Manipulador Concreto
+[medical.go](main/medical.go) - Manipulador Concreto
+[patient.go](main/patient.go) - Manipulador Concreto
+[reception.go](main/reception.go) - Manipulador Concreto
+[cashier.go](main/cashier.go) - Manipulador Concreto
+[main.go](main/main.go) - Cliente
 
 ## Código Completo
 
