@@ -124,7 +124,7 @@ Funções ou pacotes com uma única responsabilidade tem maior probabilidade de 
 
 - **Testabilidade aprimorada**
 Ao limitar o escopo de cada função ou pacote, nós podemos escrever testes mais focados e completos, resultando em maior qualidade de código e menos bugs.
-s
+
 ### Desvantagens
 
 - **Fragmentação excessiva**
