@@ -273,4 +273,19 @@ INCLUIR DIAGRAMA
 
 ## Vantagens sobre Threads
 
+- Cada Goroutine começa com o tamanho de 8kb.
+Esse tamanho pode aumentar ou diminuir conforme o seu tempo de execução.
+Considerando que as threads do sistema operacional têm mais de 1mb de tamanho. Portanto, Goroutine são extremamente baratas para alocar.
+A redução e o crescimento de uma Goroutine são gerenciados internamente pelo tempo de execução.
+Como as Goroutines são baratas, nós podemos lançar centenas de milhares de Goroutines, enquanto só podemos lançar algumas milhares de threads.
+
+- O agendamento de rotina é feito em tempo de execução. Conforme mencionado acima, o tempo de execução de uma Goroutine inicia internamente threads de sistema operacional equivalentes ao número de CPU lógica. Em seguida, ele reagenda as Goroutines em cada um dos threads do sistema operacional. Portanto, o agendamento das Goroutines é feito em tempo de execução e é bem mais rápido. No caso de threads, o agendamento das threads é feito pelo tempo de execução do sistema operacional.
+Consequentemente, o tempo de troca de contexto das Goroutines é muito mais rápido do que o tempo de troca de contexto das threads.
+Assim, milhares de Goroutines são multiplexadas em uma ou duas threads do sistema operacional.
+Se iniciarmos 1000 threads em Java, iremos consumir muitos recursos e essas 1000 threads precisarão ser agendadas pelo sistema operacional. Além disso, cada uma dessas threads terá, pelo menos, 1mb de tamanho.
+
+- Goroutines se comunicam através de canais primários integrados que são construídos para lidar com condições de corrida. A comunicação entre as Goroutines é segura e evita bloqueios explícitos, portanto, a estrutura de dados compartilhada entre Goroutines não pode ser bloqueada.
+A programação `Threaded` usa bloqueios para acessar uma variável compartilhada. Isso pode levar a impasses e condições de corrida difíceis de detectar. Em comparação, Goroutines usa canal para comunicação e toda a sincronização é gerenciada pela `go runtime`.
+Desta forma, impasses e condições de corrida são evitados.
+
 ## Goroutines anônimas
