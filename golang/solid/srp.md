@@ -10,15 +10,15 @@ Este princípio promove melhor organização, capacidade de manutenção e reuti
 Em Go, o conceito `SRP` pode ser aplicado tanto a pacotes quanto a funções. Embora Go, não seja uma linguagem orientada a objetos no sentido tradicional, ela ainda promove bons princípios de design de software, incluindo `SRP`.
 
 ### Packages
+
 Idealmente, um pacote em Go deve focar em uma única responsabilidade. Isso ajuda a criar limites e responsabilidades bem definidas para o nosso código, facilitando o gerenciamento e a compreensão.
 Por exemplo, um pacote que manipula operações de arquivo não deve incluir funções relacionadas às comunicações de rede.
 
 ### Functions
+
 As funções em Go também devem aderir ao SRP, concentrando-se em uma única tarefa. Uma função com múltiplas responsabilidades pode tornar-se difícil de compreender, manter e testar. Ao dividir funções complexas em funções menores e mais focadas, você pode criar uma base de código mais modular e de fácil manutenção.
 
 ### Exemplos
-
-Para compreendermos um pouco mais vamos ver dois exemplos abaixo, um que ilustra a boa e a má adesão ao `SRP`.
 
 #### Violando SRP
 
